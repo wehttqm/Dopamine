@@ -1,5 +1,5 @@
 import eslint from "@eslint/js";
-import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
+import eslintPluginPrettier from "eslint-plugin-prettier";
 import react from "eslint-plugin-react";
 import tailwind from "eslint-plugin-tailwindcss";
 import tseslint from "typescript-eslint";
@@ -30,5 +30,8 @@ export default tseslint.config(
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
   ...tailwind.configs["flat/recommended"],
-  eslintPluginPrettierRecommended,
+  {
+    plugins: { prettier: eslintPluginPrettier },
+    rules: eslintPluginPrettier.configs.recommended.rules,
+  },
 );

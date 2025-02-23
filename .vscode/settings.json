@@ -12,6 +12,8 @@
   "editor.rulers": [120],
 
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.endOfLine": "lf",
+  "files.eol": "\n",
 
   "tailwindCSS.includeLanguages": {
     "html": "html",
